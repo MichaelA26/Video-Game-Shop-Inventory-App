@@ -4,14 +4,14 @@ class Console
 
   attr_reader(:id, :name, :manufacturer)
 
-  def initialize
+  def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @manufacturer = options['manufacturer']
   end
 
   def save
-    sql = "INSERT INTO console
+    sql = "INSERT INTO consoles
     (name, manufacturer)
     VALUES($1, $2)
     RETURNING id"

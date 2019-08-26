@@ -4,7 +4,7 @@ class Game
 
   attr_reader(:id, :title, :platform, :selling_price, :buying_cost, :developer, :stock)
 
-  def initialize
+  def initialize(options)
     @id = options['id'].to_i if options['id']
     @title = options['title']
     @platform = options['platform']
