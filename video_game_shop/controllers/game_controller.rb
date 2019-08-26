@@ -5,7 +5,7 @@ also_reload('../models/*')
 
 get '/games' do
   @games = Game.all()
-  erb ( :"games/index" )
+  erb (:"games/index")
 end
 
 get '/games/:id' do

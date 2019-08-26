@@ -5,7 +5,7 @@ also_reload('../models/*')
 
 get '/consoles' do
   @consoles = Console.all()
-  erb ( :"consoles/index" )
+  erb (:"consoles/index")
 end
 
 get '/consoles/:id' do
