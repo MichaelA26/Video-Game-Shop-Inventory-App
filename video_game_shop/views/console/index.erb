@@ -6,9 +6,9 @@
     <th></th>
     <th>Manufacturer</th>
   </tr>
-  <% for console in @consoles %>
+  <% for console in @console %>
   <tr>
-    <td><a href="/consoless/<%= console.id %>"><%= console.name %></a></td>
+    <td><a href="/consoles/<%= console.id %>"><%= console.name %></a></td>
     <td>|</td>
     <td><%= console.manufacturer %></td>
   </tr>

@@ -4,11 +4,11 @@ require_relative('../models/console.rb')
 also_reload('../models/*')
 
 get '/consoles' do
-  @consoles = Console.all()
-  erb (:"consoles/index")
+  @console = Console.all()
+  erb (:"console/index")
 end
 
 get '/consoles/:id' do
-  @consoles = Console.find(params['id'].to_i)
-  erb(:"consoles/show")
+  @console = Console.find(params['id'].to_i)
+  erb(:"console/show")
 end
