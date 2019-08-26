@@ -15,7 +15,7 @@ class Game
   end
 
   def save
-    sql = "INSERT INTO game
+    sql = "INSERT INTO games
     (title, platform, selling_price, buying_cost, developer, stock)
     VALUES($1, $2, $3, $4, $5, $6)
     RETURNING id"
