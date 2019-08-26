@@ -1,0 +1,16 @@
+<h1>Consoles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Manufacturer</th>
+  </tr>
+  <% for console in @consoles %>
+  <tr>
+    <td><a href="/consoless/<%= console.id %>"><%= console.name %></a></td>
+    <td>|</td>
+    <td><%= console.manufacturer %></td>
+  </tr>
+  <% end %>
+</table>
