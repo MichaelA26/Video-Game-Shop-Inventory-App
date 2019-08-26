@@ -1,5 +1,6 @@
-DROP TABLE games;
 DROP TABLE consoles;
+DROP TABLE games;
+
 
 CREATE TABLE consoles
 (
@@ -16,5 +17,5 @@ CREATE TABLE games
   selling_price INT4,
   buying_cost INT4,
   developer VARCHAR(255),
-  stock INT4,
+  stock INT4
 );

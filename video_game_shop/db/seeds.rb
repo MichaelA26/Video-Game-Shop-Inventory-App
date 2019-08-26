@@ -2,7 +2,7 @@ require_relative( "../models/console.rb" )
 require_relative( "../models/game.rb" )
 require("pry")
 
-# Game.delete_all()
+Game.delete_all()
 Console.delete_all()
 
 console1 = Console.new({
