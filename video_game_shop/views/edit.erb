@@ -1,0 +1,52 @@
+<form method="post" action="/games/<%= @game.id %>">
+  <label for="title-field">Title:</label>
+  <input
+  type="text"
+  name="title"
+  id="title-field"
+  value="<%= @game.title %>"
+  />
+
+  <label for="platform">Select a platform:</label>
+  <select name="platform" id="platform-selection">
+    <option
+    value="PS4"
+    <%= "selected" if @game.platform == "PS4" %>
+    >PS4</option>
+    <option
+    value="Xbox One"
+    <%= "selected" if @game.platform == "Xbox One" %>
+    >Xbox One</option>
+    <option
+    value="Switch"
+    <%= "selected" if @game.platform == "Switch" %>
+    >Switch</option>
+  </select>
+
+  <label for="selling-price-field">Selling Price:</label>
+  <input
+  type="number"
+  name="selling_price"
+  id="selling-price-field"
+  value="<%= @game.selling_price %>"
+  />
+
+
+  <label for="buying-cost-field">Buying Cost:</label>
+  <input
+  type="number"
+  name="buying_cost"
+  id="buying-cost-field"
+  value="<%= @game.buying_cost %>"
+  />
+
+  <label for="stock-field">Stock:</label>
+  <input
+  type="number"
+  name="stock"
+  id="stock-field"
+  value="<%= @game.stock %>"
+  />
+
+  <input type='submit' value="Edit Game">
+</form>
