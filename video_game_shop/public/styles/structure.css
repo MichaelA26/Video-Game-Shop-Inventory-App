@@ -39,6 +39,8 @@ nav {
 nav ul li {
   margin-bottom: 15px;
   text-transform: uppercase;
+  display: inline;
+  padding-right: 30px;
 }
 
 ul {
