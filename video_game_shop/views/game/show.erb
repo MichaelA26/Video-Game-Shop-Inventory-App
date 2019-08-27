@@ -1,11 +1,3 @@
 <h1><%= @game.title %> (game)</h1>
 
-<p>Titles: <%= @game.title %></p>
-
-<h3>Belongs to this console (hopefully...)</h3>
-
-<ul>
-  <% @game.consoles.each do |console| %>
-  <li><%= console.name %></li>
-  <% end %>
-</ul>
+<p>Stock: <%= @game.stock %></p>

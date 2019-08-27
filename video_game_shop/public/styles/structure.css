@@ -50,10 +50,6 @@ main {
   padding: 25px;
 }
 
-.flex {
-  display: flex;
-}
-
 .flex--row {
   flex-direction: row;
 }

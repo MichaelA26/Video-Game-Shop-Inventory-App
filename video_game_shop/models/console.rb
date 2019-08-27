@@ -20,7 +20,6 @@ class Console
     @id = results.first()['id'].to_i
   end
 
-
   def self.all()
     sql = "SELECT * FROM consoles"
     results = SqlRunner.run(sql)

@@ -16,7 +16,7 @@
   </tr>
   <% for game in @games %>
   <tr>
-    <td><a href="/games/<%= game.id %>"><%= game.title %></a></td>
+    <td><%= game.title %></a></td>
     <td>|</td>
     <td><%= game.platform %></td>
     <td>|</td>
@@ -26,7 +26,14 @@
     <td>|</td>
     <td><%= game.developer %></td>
     <td>|</td>
-    <td><%= game.stock %></td>
+    <td>
+      <% if game.stock == 0 %>
+      <%= "Out of Stock" %>
+      <% else %>
+      <%= game.stock %>
+      <% end %>
+      
+    </td>
   </tr>
   <% end %>
 </table>
