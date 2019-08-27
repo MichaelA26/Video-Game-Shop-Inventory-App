@@ -4,7 +4,7 @@
 <h3>Games:</h3>
 
 <ul>
-  <% @console.games.each do |game| %>
+  <% @console.games_by_platform.each do |games_by_platform| %>
   <li><%= game.title %></li>
   <% end %>
 </ul>

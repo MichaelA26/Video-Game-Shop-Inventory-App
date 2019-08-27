@@ -20,9 +20,9 @@
     <td>|</td>
     <td><%= game.platform %></td>
     <td>|</td>
-    <td><%= game.selling_price %></td>
+    <td>£<%= game.selling_price %></td>
     <td>|</td>
-    <td><%= game.buying_cost %></td>
+    <td>£<%= game.buying_cost %></td>
     <td>|</td>
     <td><%= game.developer %></td>
     <td>|</td>
@@ -32,7 +32,6 @@
       <% else %>
       <%= game.stock %>
       <% end %>
-      
     </td>
   </tr>
   <% end %>

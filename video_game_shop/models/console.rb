@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('/game')
 
 class Console
 
@@ -18,6 +19,13 @@ class Console
     values =[@name, @manufacturer]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
+  end
+
+  def games_by_platform(platform)
+    sql = "SELECT platform FROM games
+    WHERE platform = $1"
+    results = SqlRunner.run(sql)
+    return results.map { |hash| Game.new(hash) }
   end
 
   def self.all()

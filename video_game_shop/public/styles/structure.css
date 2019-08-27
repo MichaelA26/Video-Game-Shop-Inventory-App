@@ -8,6 +8,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: yellow;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,11 +23,11 @@ h1 {
 }
 
 a, a:link, a:visited {
-  color: black;
+  color: yellow;
 }
 
 a:hover, a:active, a:focus {
-  color: #black
+  color: #yellow;
 }
 
 nav {
