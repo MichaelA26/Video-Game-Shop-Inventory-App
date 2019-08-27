@@ -1,7 +1,0 @@
-require('sinatra')
-require('sinatra/contrib/all')
-require('pry')
-require_relative('../models/stock.rb')
-require_relative('../models/console.rb')
-require_relative('../models/game.rb')
-also_reload('../models/*')
