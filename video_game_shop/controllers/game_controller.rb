@@ -20,6 +20,13 @@ get '/games/update_game' do
   erb(:edit)
 end
 
+get '/games/delete_game' do
+  @console = Console.all
+  @games = Game.all
+  @game = @games.first
+  erb(:delete)
+end
+
 post '/games' do
   Game.new(params).save
   redirect to '/games'
@@ -30,15 +37,14 @@ get '/games/:id' do
   erb(:show)
 end
 
+post '/games/delete_game' do
+  game = Game.find(params['id'])
+  game.delete
+  redirect to '/games'
+end
+
 post '/games/:id' do
   game = Game.new(params)
   game.update
   redirect to "/games/#{params['id']}"
-end
-
-post '/games/delete_game' do
-  game = Game.find(params['id'])
-  game.delete
-  erb(:delete)
-  redirect to '/games'
 end

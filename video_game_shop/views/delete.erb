@@ -1,11 +1,11 @@
 <form method="post" action="/games">
-<label for="delete">Delete:</label>
+<label for="delete">Title:</label>
 <select name="title" id="id">
   <option
   value="Title"
   <%= "selected" if @game.id == "title" %>
-  >PS4</option>
+  ></option>
 </select>
 
-<input type='delete' value="Delete Game">
+<input type="submit" value="Delete Game">
 </form>
