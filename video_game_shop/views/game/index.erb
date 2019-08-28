@@ -29,7 +29,7 @@
     <td>
       <% if game.stock == 0 %>
       <%= "Out of Stock" %>
-      <% elsif game.stock == 1..10 %>
+      <% elsif game.stock <= 10 %>
       <%= "Low Stock" %>
       <% else %>
       <%= game.stock %>
