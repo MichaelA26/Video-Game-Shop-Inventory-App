@@ -20,6 +20,11 @@ get '/games/update_game' do
   erb(:edit)
 end
 
+post '/games/update_game/:id' do
+  Game.new(params).update
+  redirect to '/games'
+end
+
 get '/games/delete_game' do
   @console = Console.all
   @games = Game.all
