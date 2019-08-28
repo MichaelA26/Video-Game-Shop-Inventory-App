@@ -1,11 +1,9 @@
-<h2><%= @game.format_name %></h2>
-
 <p>Title: <%= @game.title %></p>
 <p>Platform: <%= @game.platform %></p>
 <p>Selling Price: <%= @game.selling_price %></p>
 <p>Buying Cost: <%= @game.buying_cost %></p>
 <p>Stock: <%= @game.stock %></p>
 
-
-<a href="/games/<%= @game.id %>/edit">Edit</a>
-<form action="/games/<%= @game.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<form method="post" action="/games/<%= @game.id %>/delete">
+  <input type="submit" value="Delete Game"/>
+</form>
