@@ -14,7 +14,7 @@ class Game
     @developer = options['developer']
     @stock = options['stock'].to_i
   end
-  
+
   def save
     sql = "INSERT INTO games
     (title, platform, selling_price, buying_cost, developer, stock)
@@ -47,6 +47,13 @@ class Game
     results = SqlRunner.run( sql, values )
     # binding.pry
     return Game.new( results.first )
+  end
+
+  def delete()
+    sql = "DELETE FROM games
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
   def self.delete_all

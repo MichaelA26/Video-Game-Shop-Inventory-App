@@ -13,6 +13,9 @@
     <th>Developer</th>
     <th></th>
     <th>Stock</th>
+    <th></th>
+    <th></th>
+
   </tr>
   <% for game in @games %>
   <tr>
@@ -35,6 +38,10 @@
       <%= game.stock %>
       <% end %>
     </td>
+    <td>|</td>
+    <td><form method="post" action="/games/<%= game.id %>/delete">
+      <input type="submit" value="Delete Game"/>
+    </form>
   </tr>
   <% end %>
 </table>

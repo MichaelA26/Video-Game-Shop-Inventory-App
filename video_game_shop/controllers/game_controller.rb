@@ -25,11 +25,10 @@ post '/games/update_game/:id' do
   redirect to '/games'
 end
 
-get '/games/delete_game' do
-  @console = Console.all
-  @games = Game.all
-  @game = @games.first
-  erb(:delete)
+post '/games/:id/delete' do
+  game = Game.find(params['id'])
+  game.delete
+  redirect to '/games'
 end
 
 post '/games' do
@@ -40,12 +39,6 @@ end
 get '/games/:id' do
   @games = Game.find(params['id'])
   erb(:show)
-end
-
-post '/games/delete_game' do
-  game = Game.find(params['id'])
-  game.delete
-  redirect to '/games'
 end
 
 post '/games/:id' do
