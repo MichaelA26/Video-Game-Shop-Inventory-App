@@ -1,11 +1,11 @@
 <form method="post" action="/games">
-<label for="delete">Title:</label>
-<select name="title" id="id">
-  <option
-  value="Title"
-  <%= "selected" if @game.id == "title" %>
-  ></option>
-</select>
+  <label for="delete">Title:</label>
+  <select name="title" id="id">
+    <option
+    value="Title"
+    <%= "selected" if @game.id == "title" %>
+    ></option>
+  </select>
 
-<input type="submit" value="Delete Game">
+  <input type="submit" value="Delete Game">
 </form>

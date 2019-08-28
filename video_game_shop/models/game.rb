@@ -14,7 +14,7 @@ class Game
     @developer = options['developer']
     @stock = options['stock'].to_i
   end
-
+  
   def save
     sql = "INSERT INTO games
     (title, platform, selling_price, buying_cost, developer, stock)
