@@ -16,7 +16,7 @@
   </tr>
   <% for game in @games %>
   <tr>
-    <td><%= game.title %></a></td>
+    <td><%= game.title %></td>
     <td>|</td>
     <td><%= game.platform %></td>
     <td>|</td>
@@ -29,6 +29,8 @@
     <td>
       <% if game.stock == 0 %>
       <%= "Out of Stock" %>
+      <% elsif game.stock == 1..10 %>
+      <%= "Low Stock" %>
       <% else %>
       <%= game.stock %>
       <% end %>

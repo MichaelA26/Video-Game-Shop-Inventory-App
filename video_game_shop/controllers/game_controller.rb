@@ -36,8 +36,9 @@ post '/games/:id' do
   redirect to "/games/#{params['id']}"
 end
 
-post '/games/:id/delete' do
+post '/games/delete_game' do
   game = Game.find(params['id'])
   game.delete
+  erb(:delete)
   redirect to '/games'
 end
