@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require ('pry')
 
 class Game
 
@@ -24,7 +25,14 @@ class Game
     @id = results.first()['id'].to_i
   end
 
-
+  def update()
+    sql = "UPDATE games
+    SET(title, platform, selling_price, buying_cost, stock) =
+    ($1, $2, $3, $4, $5)
+    WHERE id = $6"
+    values = [@title, @platform, @selling_price, @buying_cost, @stock, @id]
+    SqlRunner.run(sql, values)
+  end
 
   def self.all()
     sql = "SELECT * FROM games"
@@ -37,6 +45,7 @@ class Game
     WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
+    # binding.pry
     return Game.new( results.first )
   end
 

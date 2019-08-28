@@ -1,4 +1,4 @@
-<form method="post" action="/game">
+<form method="post" action="/games">
   <label for="title-field">Title:</label>
   <input
   type="text"
@@ -6,7 +6,7 @@
   id="title-field"
   />
 
-<label for="platform">Select a platform:</label>
+<label for="platform">Platform:</label>
 <select name="platform" id="platform-selection">
   <option value="PS4">PS4</option>
   <option value="Xbox One">Xbox One</option>
@@ -27,6 +27,13 @@
   type="number"
   name="buying_cost"
   id="buying-cost-field"
+  />
+
+  <label for="developer-field">Developer:</label>
+  <input
+  type="text"
+  name="developer"
+  id="developer-field"
   />
 
 <form method="post" action="/game">

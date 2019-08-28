@@ -20,12 +20,12 @@ class Console
     @id = results.first()['id'].to_i
   end
 
-  def games_by_platform(games_by_platform)
-    sql = "SELECT platform FROM games"
-    values = [games_by_platform]
-    results = SqlRunner.run(sql, values)
-    return results.map { |hash| Console.new(hash) }
-  end
+  # def games_by_platform(games_by_platform)
+  #   sql = "SELECT platform FROM games"
+  #   values = [games_by_platform]
+  #   results = SqlRunner.run(sql, values)
+  #   return results.map { |hash| Console.new(hash) }
+  # end
 
   def self.all()
     sql = "SELECT * FROM consoles"
